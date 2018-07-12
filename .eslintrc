@@ -1,0 +1,185 @@
+{
+    "extends": "airbnb-base",
+    "plugins": [
+        "react"
+    ],
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true,
+        "jquery": true,
+        "jasmine": true
+    },
+    "globals": {
+        "$SYS": true,
+        "$ROOM": true,
+        "DYS": true,
+        "Backbone": true,
+        "$": true,
+        "__PROD__": true
+    },
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "ecmaVersion": 7,
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "rules": {
+        // ensure JSDoc comments are valid
+        // http://eslint.org/docs/rules/valid-jsdoc
+        "valid-jsdoc": "warn",
+
+        // specify the maximum cyclomatic complexity allowed in a program
+        // http://eslint.org/docs/rules/complexity
+        "complexity": ["warn", 10],
+
+        // specify curly brace conventions for all control statements
+        // http://eslint.org/docs/rules/curly
+        "curly": "off",
+
+        // make sure for-in loops have an if statement
+        // http://eslint.org/docs/rules/guard-for-in
+        "guard-for-in": "warn",
+
+        // disallow division operators explicitly at beginning of regular expression
+        // http://eslint.org/docs/rules/no-div-regex
+        "no-div-regex": "warn",
+
+        // disallow unmodified conditions of loops
+        // http://eslint.org/docs/rules/no-unmodified-loop-condition
+        "no-unmodified-loop-condition": "warn",
+
+        // require immediate function invocation to be wrapped in parentheses
+        // http://eslint.org/docs/rules/wrap-iife.html
+        "wrap-iife": ["error", "any", {
+            "functionPrototypeMethods": false
+        }],
+
+        // disallow the catch clause parameter name being the same as a variable in the outer scope
+        // http://eslint.org/docs/rules/no-catch-shadow
+        "no-catch-shadow": "error",
+
+        // require trailing commas in multiline object literals
+        // http://eslint.org/docs/rules/comma-dangle
+        "comma-dangle": ["error", "never"],
+
+        // enforces consistent naming when capturing the current execution context
+        // http://eslint.org/docs/rules/consistent-this
+        "consistent-this": ["error", "that"],
+
+        // this option sets a specific tab width for your code
+        // http://eslint.org/docs/rules/indent
+        "indent": ["error", 4, {
+            "MemberExpression": 1,
+            "SwitchCase": 1
+        }],
+
+        // specify whether double or single quotes should be used in JSX attributes
+        // http://eslint.org/docs/rules/jsx-quotes
+        "jsx-quotes": ["off", "prefer-double"],
+
+        // specify the maximum depth that blocks can be nested
+        // http://eslint.org/docs/rules/max-depth
+        "max-depth": ["warn", 4],
+
+        // specify the maximum length of a line in your program
+        // http://eslint.org/docs/rules/max-len
+        "max-len": ["error", 80, 4, {
+            "ignoreUrls": true,
+            "ignoreComments": false,
+            "ignoreRegExpLiterals": true,
+            "ignoreStrings": true,
+            "ignoreTemplateLiterals": true
+        }],
+
+        // specify the max number of lines in a file
+        // http://eslint.org/docs/rules/max-lines
+        "max-lines": ["warn", {
+            "max": 300,
+            "skipBlankLines": true,
+            "skipComments": true
+        }],
+
+        // specify the maximum depth callbacks can be nested
+        // http://eslint.org/docs/rules/max-nested-callbacks
+        "max-nested-callbacks": ["error", 5],
+
+        // limits the number of parameters that can be used in the function declaration.
+        // http://eslint.org/docs/rules/max-params
+        "max-params": ["error", 10],
+
+        // specify the maximum number of statement allowed in a function
+        "max-statements": ["error", 50],
+
+        // restrict the number of statements per line
+        // http://eslint.org/docs/rules/max-statements-per-line
+        "max-statements-per-line": "error",
+
+        // allow/disallow an empty newline after var statement
+        // http://eslint.org/docs/rules/newline-after-var
+        "newline-after-var": ["warn", "always"],
+
+        // http://eslint.org/docs/rules/newline-before-return
+        "newline-before-return": "warn",
+
+        // disallow use of the continue statement
+        // http://eslint.org/docs/rules/no-continue
+        "no-continue": "error",
+
+        "linebreak-style": ["off", "windows"],
+        // ES6 配置
+        // require method and property shorthand syntax for object literals
+        // http://eslint.org/docs/rules/object-shorthand
+        "object-shorthand": ["warn", "always", {
+            "ignoreConstructors": false,
+            "avoidQuotes": true
+        }],
+
+        // 需要或不允许命名函数表达式
+        "func-names": ["warn", "never"],
+
+        // 未使用变量
+        "no-unused-vars": "warn",
+
+        // 需要或不允许换行符的文件
+        "eol-last": ["warn", "always"],
+
+        // 下划线
+        "no-underscore-dangle": ["error", {
+            "allowAfterThis": true
+        }],
+
+        "space-before-function-paren": ["error", {
+            "anonymous": "never",
+            "named": "always"
+        }],
+
+        "no-unused-expressions": ["error", {
+            "allowShortCircuit": true,
+            "allowTernary": true
+        }],
+
+        "class-methods-use-this": "off",
+
+        "arrow-body-style": "off",
+
+        "semi": "off",
+
+        "import/extensions": "off",
+
+        "import/no-unresolved": "off",
+        
+        "react/jsx-uses-vars": "error",
+
+        "no-tabs": "off",
+
+        "no-plusplus": "off",
+
+        "no-new": "off",
+
+        "no-console": "off",
+
+        "prefer-template": "off"
+    }
+}
